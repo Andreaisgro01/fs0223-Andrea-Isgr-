@@ -23,6 +23,19 @@
         .p-footer{
             color: white;
         }
+        a{
+            flex-direction: row;
+            justify-content:space-around;
+            
+        }
+        #container{
+            flex: auto;
+            text-align: center;
+            
+            flex-direction: row;
+                
+        }
+        
     </style>
 </head>
 <body>
@@ -32,15 +45,17 @@
         <h1>Epicode- il blog dei developers</h1>
 
     </header>
-    
-    <nav>
-        
+    <div id="container">
+    <nav class="navigation">    
         <a  href="#">Home</a></li>
-        
+    </nav>    
+    <nav class="navigation">    
         <a href ="#">Articoli</a></li>
-        
+    </nav>
+    <nav class="navigation">     
         <a  href="#">Job</a></li>
     </nav>
+</div>
     
     <article>
         <h2>Come creare un template per il post</h2>

@@ -1,0 +1,30 @@
+a{
+    color: #000;
+}
+.colore-rosso{
+    color: red;
+}
+/* tag=> peso 1
+    class=> peso 10
+    id peso=> 100
+    inline style=> peso 100 */
+.sfondo-verde{
+    background-color: green !important;
+     background-color: yellow;
+}
+#colore-blu{
+    color: blue;
+}
+/*selezione di child nel parent con uno spazio e posso anche aggiugnere più elementi nello stesso selettoreper snellire il codice se necessario  */
+
+.paragrafo-speciale b,      /*peso 11 (10+1)*/
+ .paragrafo-speciale em{     /* peso 11 (10+1)*/
+    color: blueviolet;
+}
+
+.div-speciale > span{
+    font-weight: bold;
+}
+.div-speciale, ul, li, span{
+    font-style: italic;
+}

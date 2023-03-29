@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+<!-- input cambia a seconda del type col "name" diamo un identificativo ai dati mediante la funzione chiave/valore, "required" controlla la presenza e la corretteza dei dati inseriti il button invece corrisponde al tasto e si trova sempre dentro il form -->
+
+        <input type="text" placeholder="Nome" name="nome">
+        <input type="text" placeholder="Cognome" name="cognome">
+        <input type="email" required placeholder="La tua email" name="email">
+        <input type="password" placeholder="inserire password" name="psw">
+        
+        <br>
+        
+        <label for="consenso">
+            Acconsento al trattamento dei dati
+        </label>
+        <input required id="consenso" checked type="checkbox">
+        
+        <label for="m">maschio</label>
+        <input type="radio" id="m" name="sesso">
+        
+        <label for="f">femmina</label>
+        <input type="radio" id="f" name="sesso">
+        
+        <label for="x">non specifico</label>
+        <input type="radio" id="x" name="sesso">
+
+        <hr>
+            
+            <select name="city">
+                <option value="">--scegli--</option>
+                <option selected value="roma">Roma</option>
+                <option value="milano">Milano</option>
+            </select>
+
+            <button>Invia</button>
+            
+            <textarea name="messaggio" cols="30" rows="10"></textarea> 
+    
+    <!-- cols indica le lettere in orizzontale mentre rows indica le righe di testo -->
+        </form>
+</body>
+</html>

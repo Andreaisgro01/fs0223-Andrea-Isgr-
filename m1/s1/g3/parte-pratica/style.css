@@ -1,0 +1,50 @@
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+}
+:root{
+    font-size: 16px;
+}
+#p1{
+    color: green;
+    font-size: 0.7em;
+    background-color: #FBF0B2;
+    padding: 10px;
+    border-top:5px solid yellow ;
+    text-align: center;
+}
+h1{
+    color: gray;
+}
+header{
+    
+}
+
+.focaccia{
+    border-radius: 10px;  
+}
+.features{
+    border-left: 5px solid yellow;
+    padding-left:40px ;
+    font-size: 0.7rem;
+}    
+.p2{
+        text-align: center;
+        color: gray;
+    }
+#margin{
+    width: 700px;
+    margin: 0 auto;
+}
+.titleh2{
+    border-bottom: 2px solid aqua;
+    font-weight: bold;
+    color: gray;
+}
+.endlink{
+    color: brown;
+}
+
