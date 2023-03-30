@@ -1,0 +1,30 @@
+.quadrato{
+    width: 100px;
+    height: 100px;
+    border: 1px dotted #000;
+    word-break: break-all;
+}
+#q1{
+    word-break: break-all;
+}
+
+
+.quadrato-blocco{
+    display: block;
+}
+
+.griglia{
+    width: 1170px;
+    margin: 0 auto;
+}
+.col{
+    width: calc(100% / 4 - 0.2rem);
+    margin-top: 200px;
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    display: inline-block;
+    
+}
+
+

@@ -1,0 +1,22 @@
+/* Posso selezionare per attributo facendo così:
+input[type="chheckbox"] */
+
+#check{
+    display:none;
+}
+#check:checked{
+    width: 10px;
+    height: 10px;
+}
+#menu{
+    list-style: none;
+    height: 0px;
+    overflow: hidden;
+}
+#check:checked + #menu{
+height:200px;
+}
+
+#menu li:not(:first-child) a{
+color: red;
+}
