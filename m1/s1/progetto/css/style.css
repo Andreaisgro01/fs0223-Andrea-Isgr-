@@ -25,6 +25,7 @@ header{
     margin: 0 auto;
     
     background-image: url(../images/banner.jpg);
+    background-position: center center;
 }
 .logo{
     width: 200px;
