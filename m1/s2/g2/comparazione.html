@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let  anni = 30;
+        
+        console.log(anni < 50); // true
+        console.log(anni > 50); // false
+        console.log(anni > 30); // falso perché è uguale
+        console.log(anni >= 30); // true
+        console.log(anni <= 30); // true
+        console.log(anni == 30); // true perché uguali
+        console.log(anni != 30); // false perché uguali
+        console.log(anni === '30'); // false perché diversi nel tipo di dsto, === significa constatare un'uguaglianza stretta(non accetta minime differenze e vuole un valore identico a quello della variabile)
+        console.log(anni == '30'); // true perché valore uguale e tipo diverso
+        console.log(anni !== '30'); // true perché diversi in quanto abbiamo la stringa
+        
+        //operatori logici
+        
+        
+        //AND
+        
+        console.log( anni >=18 && anni <= 120 ); //true
+        console.log( anni >=31 && anni <= 120 ); //false
+        
+        
+        //OR
+
+        let email = 'info@example.com';
+        let username = 'info'
+        console.log( email == 'info@example.com' || username == 'info' ); //true
+        console.log( email == 'info@example.com' || username == 'Mario' ); //true
+        
+        // utilizzo le parentesi per far si che l'operazione al loro interno venga eseguita prima che l'operatore not abbia effetto
+        console.log( !(email == 'info@example.com')); //false
+    
+        let dato = [];
+        console.log(Array.isArray(dato)); //true, verifico se il dato è un array
+        console.log(!Array.isArray(dato)); //false, verifico se il dato non è un array, col ! verifico il contrario
+        
+        console.log(!true) // false in quanto contrario di true
+        document.getElementById('test');
+        inner.HTML = 'Ciao';
+    </script>
+    
+</body>
+</html>

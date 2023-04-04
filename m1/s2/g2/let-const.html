@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--hoisting   -->
+    <script>
+
+        var a = 0;
+        {
+            console.log(a); // raggiungibile perchè è una var ed è fuori dal blocco 
+        }
+        {
+        var b = 0;
+        }
+            console.log(b); // raggiungibile perchè è una var
+        //let è siggetta a blockscope
+        let c = 1;
+
+        {
+           console.log(c); // raggiungibile perchè esterna al blocco 
+        }
+
+        {
+        let d = 2; // nasce e muore nel blocco
+        console.log(d);         
+        }
+        //    console.log(d); // non visibile, perchè nasce nel blocco precedente
+        
+        let e; // ora è globale
+        {
+            e = 10; // modifico la let globale
+        }
+         console.log(e); //10
+
+         // casi particolari
+
+        //var e = 8; l'identificatore è giaà in uso sotto forma di let
+
+        var f = 9;
+        {
+            //console.log(f);  la var f fuori dal blocco viene eliminiata, e non posso accedere alla variabile sottostante prima della sua inizzializzazione
+            let f = 10;
+            console.log(f);     
+        }
+
+        //const
+
+        const  NOME_UTENTE = 'Mario'
+        
+        // NOME_UTENTE = 'Giacomo'; => Errore'
+
+        const OGGETTO = {
+            nome : 'Mario',
+            anni : 30
+        }
+
+        //Object.freeze(OGGETTO) Se si volesse bloccare il riassegnamento anche per i valori degli oggetti
+        
+        OGGETTO.nome = 'Maria'; // avviene il riassegnamento
+        console.log(OGGETTO);
+        
+        // scope funzioni
+        let p = 0;
+        function prova(){
+            console.log(p); // raggiugne la variabile p in quanto nata all'esterno
+        }
+
+        prova();
+        console.log(p);
+
+        function prova2(){
+            let y = 200;
+        }
+        console.log(y); // non raggiungibile, non posso mai raggiugnere variabili all'interno di un blocco dal esterno
+
+
+    </script>
+    
+</body>
+</html>
