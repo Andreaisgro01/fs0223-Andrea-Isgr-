@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let obj = {};
+// dentro gli oggetti si assegnano proprietà(gusto, prezzo) e valori(margherita, 5) e posso scrivere solo proprietà al suo interno che possono essere anche oggetti o funzioni(che in questo caso si chiamano metodi) metodo = proprietà che contengono una funzione al loro interno
+        
+    {
+        let pizza = {
+            gusto: 'margherita',
+            prezzo: 5,
+            aggiunte: {
+                doppiaMozzarella : 1,
+                basilico: 0.5
+            },
+            mostraPrezzo: function() {
+            console.log(`Il prezzo della ${this.gusto} è pari a ${this.prezzo} euro`);
+            }
+        }
+        
+    
+        //lettura
+            console.log(pizza.gusto);
+
+        //recupero il prezzo del basilico
+        console.log(pizza.aggiunte.basilico);
+
+            //scrittura
+            pizza.gusto= '4 formaggi';
+            console.log(pizza.gusto);
+        //non posso scrivere tutto l'oggetto nel dom
+            document.write(pizza); //[object Object]
+            document.write(pizza.gusto);// 4 formaggi
+        
+        //lancio di un metodo
+        pizza.mostraPrezzo();
+    }     
+    {
+        //costruttore degli oggetti
+        function Pizza(_gusto, _prezzo){
+            this.gusto = _gusto;
+            this.prezzo = _prezzo;
+            this.mostraPrezzo = function() {
+            console.log(`Il prezzo della ${this.gusto} è pari a ${this.prezzo} euro`);
+            }
+        }
+
+        let margherita = new Pizza('margherita', 5);
+        let diavola = new Pizza('diavola',1);
+
+        console.log(margherita, diavola);
+
+        margherita.mostraPrezzo();
+        diavola.mostraPrezzo();
+
+        //aggiunta di una proprietà a tutti gli oggetti della classe Pizza, utilizzando la proprietà prototype    
+        Pizza.prototype.aggiunte = {
+                doppiaMozzarella : 1,
+                basilico: 0.5
+            };
+                console.log(margherita.aggiunte.basilico)
+    }
+
+        //riordinare l'array
+
+        let lettere = ['a', 'z', 'd', 'r', 'c'];
+
+        lettere.sort() //riordino in ordine alfabetico
+        lettere.reverse() //inverte l'ordine attuale
+        console.log(lettere);
+
+        let num = [1,100,20,22,101];
+
+        num.sort(); 
+        console.log(num);            
+   </script>
+</body>
+</html>
