@@ -122,7 +122,7 @@ se inserisco un numero divero a 5 compare not equal  */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 6
-  Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato 
+  Stai lavorando su un sito di e-commerce. Oggi è il black Friday e viene applicato 
   il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, 
   determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il 
@@ -131,7 +131,7 @@ se inserisco un numero divero a 5 compare not equal  */
 
 {
   let totalShoppingCart = 31;
-  // variabile sconto che calcola il Black Friday
+  // variabile sconto che calcola il black Friday
   let sconto = totalShoppingCart * 0.8;
 
 
@@ -310,7 +310,7 @@ let arr = []
 /*
 arr.push(1);
 console.log(arr);
-abbiamo provato il metodo push su un singolo elemento per poi andare ad applicarlo
+abiamo provato il metodo push su un singolo elemento per poi andare ad applicarlo
 agli altri elementi dell'esercizio 
 */
 arr.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);

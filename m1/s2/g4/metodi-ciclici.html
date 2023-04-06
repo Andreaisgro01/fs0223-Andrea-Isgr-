@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//foreach=per ogniuno 
+        let menu = ['diavola','margherita','marinara','mimosa'];
+        menu.forEach(function(pizza){
+            document.write(pizza + '<br>');
+            
+        });
+
+        //map
+        //tutte le volte che dobbiamo modificare i valori dell'array
+
+        let numeri = [1,2,3,4,5,6,];
+        //map non modifica l'array origiinale ma ne crea uno nuovo
+        let numeriX2 = numeri.map(function(n){
+            
+            return n * 2;
+        })
+        console.log(numeriX2)
+
+        //uso lo stesso forEach di riga 12
+        menu = ['diavola','margherita','marinara','mimosa'];
+        
+        menu =menu.map(function(pizza){
+                return `<b> ${pizza} </b`;
+        })
+        
+        menu.forEach(function(pizza){
+            
+            document.write(pizza + '<br>');
+         });
+
+         //filter permette di filtrare i valori richiedendone solo alcuni in determinati range
+
+         numeri = [1,2,3,4,5,6,9];
+         let numeriFiltrati = numeri.filter(function(n) {
+            return n > 5;
+         })
+            console.log(numeriFiltrati)
+    
+    
+            let menuCompleto = [
+            {
+                gusto: 'margherita',
+                prezzo: 5,                 
+                disponibile: true
+            },
+            {
+                gusto: 'diavola',
+                prezzo: 7,    
+                disponibile: true          
+            },
+            {
+                gusto: 'hawayana',
+                prezzo: 9,
+                disponibile: false                 
+            },
+        ]
+        let menuFiltrato = menuCompleto.map(function(pizza){
+            
+            return pizza.disponibile 
+        })
+        console.log(menuFiltrato)    
+
+        //find
+        numeri = [80,20,3,43,5];
+        let numeroFiltrato = numeri.find(function(n){
+            return n > 20;
+        })
+
+        console.log(numeroFiltrato);
+
+        //eliminare da un array
+
+         menu = ['diavola','margherita','marinara','mimosa'];
+
+         let indice = menu.indexOf
+         ('marinara'); //2
+        menu.splice(indice, 1); //elimino da array
+        console.log(menu)
+    </script>    
+</body>
+</html>
