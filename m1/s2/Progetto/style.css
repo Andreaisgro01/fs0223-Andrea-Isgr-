@@ -18,11 +18,13 @@ header{
 #logo{
     height: 70px;
     padding-left: 50px ;
+    padding-bottom: 10px;
 }
 nav{
     background-color: #4a4e69;
     padding-left: 50px ;
     padding: 5px;
+    margin-bottom: 30px;
 }
 .navlink {
     padding:  20px;
@@ -41,6 +43,7 @@ h4{
     color: #eaeded;
     background-color:#f56600;
     padding: 10px;
+    margin-bottom: 30px;
 }
 .titolo2{
     background-image: url(../assets/bg-image.png);
@@ -75,6 +78,11 @@ a{
     
     
 }
+h3{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
 .gift-photo1 {
     background-image: url(../assets/img_1.jpg);
     background-size: cover;
@@ -150,6 +158,9 @@ footer{
     width: 100px;
     padding-top: 40px;
     padding-bottom: 50px;
+}
+main a{
+    color: #B3C99C;
 }
 
 
