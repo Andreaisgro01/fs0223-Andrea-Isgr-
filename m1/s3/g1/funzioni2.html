@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="testo"></div>
+    <script>
+        function scrivi(str){
+        let testo = document.getElementById('testo');
+        testo.innerHTML += str;
+        }
+        scrivi('hello');
+        scrivi('<br>');
+        scrivi('ciao ');
+
+        //callbacks
+
+        function scriviPro(str,fn){
+            let testo = document.getElementById('testo');
+            testo.innerHTML += fn(str);
+        }
+
+        function grassetto(stringa){
+            return `<b>${stringa}</b>`;
+        }
+        function corsivo(stringa){
+            return `<i>${stringa}</i>`;
+        }
+
+        scriviPro('testo aggiunto',grassetto);
+        scriviPro(' testo aggiunto corsivo',corsivo);
+        scriviPro(' testo aggiunto in movimento',function(stringa){
+            return `<marquee>${stringa}</marquee>`;
+        });
+        
+        //usiamo le cakkbacks giornalmente, basti solo pensare ad array.map 
+        let array = [1,2,3,4]
+        //modalità con funzione nominale
+        function raddoppia(n){
+            return n * 2;
+        }
+          let res1 = array.map(raddoppia)
+          let res2 = array.map(function(n){
+            return n * 2;
+          })
+
+          console.log(res1,res2);
+
+        
+        /**
+        //funzioni anonime
+        */
+        let prova = function(){
+            console.log('funziona');
+        }
+        console.log(prova); // vedo contenuto funzione
+
+        prova();
+
+        //self invoking
+        (function(){
+            console.log('funzione autoinvocata');
+        })();
+
+        //scope delle variabili nelle funzioni, se la variabile è dichiarata solo dentro la funzione avrà efficacia solo al suo interno
+
+        let pizze = ['margherita','diavola'];//scope globale
+        let secondi;//scope globale
+        function testScope(){
+            console.log(pizze);//la variabile globale è visibile all'interno della funzione
+            let primi = ['pasta al pomodoro', 'carbonara'];//questa variabile è relegata all'interno della funzione
+            secondi = ['parmigiana','pollo arrosto'];
+            console.log(primi);//la variabile è raggiungibile
+        }
+        testScope();
+        //console.log(primi); Uncaught ReferenceError: Primi is not defined
+        console.log(secondi);
+        
+
+        //funzioni annidate
+        
+        function genitore(){
+            let nome = 'Mario';
+            function figlio(){
+            console.log(nome); // funziona perchè nome è globale rispetto alla funzione figlio    
+            let cognome = 'Rossi';
+            }
+            figlio();// la funzione esistre solo dentro alla funzione genitore
+        }
+
+        genitore();
+
+        function a(x){
+            return function b(y){
+                return function c(z){
+                    return x + y + z;
+                }
+            }
+        }
+        console.log(a(3)(3)(2) );
+
+        let b = a(3);
+        let c = b(3);
+        console.log(c(2));
+        
+    </script>
+</body>
+</html>
