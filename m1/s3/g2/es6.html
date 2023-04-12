@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let persona1 = {
+            name: 'John',
+            gender: 'male'
+        }
+        let persona2 = {
+            surname: 'Doe',
+            gender: 'female'
+        }
+
+    let personaCompleto = {
+        ...persona1,
+        ...persona2
+    }
+        console.log(personaCompleto)
+
+    let dati = ['margherita',5,true];
+    let [gusto, prezzo , disponibilità] = dati
+    
+    let personX = {
+        name: 'Joe',
+        gender:'male',
+        surName: 'Doc'
+    }
+
+    let {name,gender,surName} = personX;
+
+    console.log(name)
+    </script>
+</body>
+</html>

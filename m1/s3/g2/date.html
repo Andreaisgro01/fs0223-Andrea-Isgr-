@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let now = new Date(); //data attuale
+        let anno = now.getFullYear();//anno
+        let weekDay = now.getDay();//giorno della settimana(1,2,3,4,5,6,7)da Domenica
+        let giorni =[
+            'domenica',
+            'lunedi',
+            'martedi',
+           'mercoedi',
+            'giovedi',
+           'venerdi',
+           'sabato',    
+        ]
+            console.log(giorni[weekDay]);
+        let monthDay = now.getMonth();//il contegio parte da 0
+       
+        let time = now.getTime();
+        
+        console.log(anno,weekDay,monthDay,time);
+        now.setMonth();
+         monthDay = now.getMonth();
+         console.log(now);
+
+         //data ad un mese da oggi
+         let future = new Date();
+         future.setMonth(future.getMonth() +1);
+
+         console.log(future);
+
+         //localizzare le date
+        let options = {weekday: 'long', year: 'numeric', month:'long'}
+
+         let dataItaliano =future.toLocaleDateString('it-IT', options);
+
+         console.log(dataItaliano);
+    
+         
+    </script>
+
+</body>
+</html>
