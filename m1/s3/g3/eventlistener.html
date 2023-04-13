@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bottone">Click</button>
+    <button id="bottone2">Passa il mouse</button>
+
+
+    <script>
+
+        //   function saluto() {
+        //     console.log('Ciao');
+        //   } 
+        
+        let bottone = document.querySelector('#bottone');
+        let bottone2 = document.querySelector('#bottone2');
+
+        bottone.addEventListener('click',function(){
+            console.log('Ciao');
+        })
+        bottone2.addEventListener('mouseover',function(){
+            console.log("mouse passato");
+        })
+        
+
+    </script>
+</body>
+</html>
