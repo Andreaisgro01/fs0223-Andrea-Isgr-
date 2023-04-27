@@ -1,0 +1,49 @@
+
+#lavagna{
+    width: 1200px;
+    height: 550px;
+    background-color: #666666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    
+    
+}
+.task{
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 3px 3px 5px;
+}
+#task1, #task5, #task7{
+    background-image:linear-gradient(#fafbc9,#fafbc9,#fafbc9,#fafbc9,#bdbda3);
+    rotate: 5deg;
+    transition: transform 500ms, scale 500ms;
+}
+#task2, #task4, #task8{
+    background-image: linear-gradient(#c8f8ca,#c8f8ca,#c8f8ca,#c8f8ca,#9eb5a1);
+}
+#task3, #task6{
+    background-image: linear-gradient(#c7c7f4,#c7c7f4,#c7c7f4,#c7c7f4,#8b8c9b);
+    rotate: -10deg;
+    transition: transform 500ms, scale 500ms;
+}
+#task2:hover, #task4:hover, #task8:hover{
+    transform: rotate(5deg);
+    scale:1.3;
+}
+#task1:hover, #task5:hover, #task7:hover{
+    transform: rotate(-5deg);
+    scale:1.3;
+}
+#task3:hover, #task6:hover{
+    transform: rotate(20deg);
+    scale: 1.3;
+}
+
