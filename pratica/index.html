@@ -5,34 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>FORM con OOP</h1>
-    <form>
-      <div>
-        <label for="pet-name">PET NAME</label>
-        <input id="pet-name" />
-      </div>
-        <div>
-        <label for="owner">OWNER NAME</label>
-        <input id="owner" />
-      </div>
-        <div>
-        <label for="species">SPECIES</label>
-        <input id="species" />
-      </div>
-        <div>
-        <label for="breed">BREED</label>
-        <input id="breed" />
-      </div>
-      <button type="submit"></button>
-    
-    </form>
-    <ul id="pets-list"></ul>
+    <div class="title">
+        <h1>INSERIMENTO DATI</h1>
+    </div>
+    <div class="main-container">
+        <form action="">
+            <div class="input-container">  
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="buttons-container">    
+                <div class="save">
+                    <button id="saveButton" class="button-save">Save</button>
+                </div>
+                <div class="delete">
+                    <button id="deleteButton" class="button-delete">Delete</button>
+                </div>  
+            </div>
+        </form>
+    </div>
 
-    <script src="form.js"></script>
-    <script src="./script.js">
-        
-    </script>
+    <div>
+        <p id="target"></p>
+    </div>
+    <script src="./script.js"></script>
+    
 </body>
 </html>
