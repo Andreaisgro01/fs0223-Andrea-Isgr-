@@ -1,9 +1,35 @@
+var Call = /** @class */ (function () {
+    function Call(id, durata, dataOra) {
+        this.id = id;
+        this.durata = durata;
+        this.dataOra = dataOra;
+    }
+    return Call;
+}());
 var Cellulare = /** @class */ (function () {
     function Cellulare(carica, numeroChiamate) {
         this.costoMinuto = 0.20;
+        this.registroChiamate = [];
         this.carica = carica;
         this.numeroChiamate = numeroChiamate;
     }
+    Cellulare.prototype.getRegistroChiamate = function () {
+        console.log(this.registroChiamate);
+    };
+    Cellulare.prototype.filtraChiamatePerDataEOra = function (date, hour) {
+        var filtra = [];
+        this.registroChiamate.forEach(function (c) {
+            if (date == c.dataOra.getDate() && hour == c.dataOra.getHours()) {
+                filtra.push(c);
+            }
+        });
+        if (filtra.length == 0) {
+            console.log("non ci sono risultati");
+        }
+        else {
+            console.log(filtra);
+        }
+    };
     Cellulare.prototype.ricarica = function (euro) {
         this.carica += euro;
     };
@@ -18,6 +44,8 @@ var Cellulare = /** @class */ (function () {
         if (costoChiamata <= this.carica) {
             this.carica -= costoChiamata;
             this.numeroChiamate++;
+            var recTime = new Date();
+            this.registroChiamate.push(new Call(this.numeroChiamate, min, recTime));
             console.log("Chiamata di ".concat(min, " minuti effettuata."));
         }
         else {
@@ -34,14 +62,14 @@ var smartphone1 = new Cellulare(0, 0);
 var smartphone2 = new Cellulare(0, 0);
 var smartphone3 = new Cellulare(0, 0);
 console.log(' Smartphone 1');
-smartphone1.ricarica(5);
-console.log(smartphone1.numero404());
-console.log('Numero chiamate:', smartphone1.getNumeroChiamate());
-smartphone1.chiamata(18);
-console.log(smartphone1.numero404());
-console.log('Numero chiamate:', smartphone1.getNumeroChiamate());
+smartphone1.ricarica(20);
+smartphone1.chiamata(20);
+smartphone1.chiamata(5);
+smartphone1.chiamata(8);
 smartphone1.azzeraChiamate();
-console.log('Numero chiamate:', smartphone1.getNumeroChiamate());
+smartphone1.filtraChiamatePerDataEOra(26, 16);
+console.log(smartphone1.getNumeroChiamate());
+smartphone1.getRegistroChiamate();
 console.log('Smartphone 2');
 smartphone2.ricarica(2);
 console.log(smartphone2.numero404());
