@@ -1,0 +1,25 @@
+ul{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+    li{ 
+        margin-right: 50px;
+    }
+}
+button{
+    padding: 0 auto;
+    height: auto;
+}
+.imgs-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.imgs{
+    margin-left: 50px;
+    border-radius: 100%;
+}
+
+.imgs p {
+    float: right;
+}
