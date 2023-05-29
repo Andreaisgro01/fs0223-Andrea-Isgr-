@@ -85,6 +85,7 @@ class Cellulare implements Smartphone{
 const smartphone1 = new Cellulare(0,0);
 const smartphone2 = new Cellulare(0,0);
 const smartphone3 = new Cellulare(0,0);
+const smartphone4 = new Cellulare(0,0);
     
 
     console.log(' Smartphone 1');
@@ -116,5 +117,15 @@ const smartphone3 = new Cellulare(0,0);
     console.log('Numero chiamate:', smartphone3.getNumeroChiamate());
     smartphone3.azzeraChiamate();
     console.log('Numero chiamate:', smartphone3.getNumeroChiamate());
-  
+
+    console.log('Smartphone 4');
+    smartphone4.ricarica(200);
+    smartphone4.chiamata(20);
+    smartphone4.chiamata(30);
+    smartphone4.chiamata(50);
+    console.log(smartphone4.numero404());
+    smartphone4.azzeraChiamate();
+    console.log('Numero chiamate', smartphone4.getNumeroChiamate());
+    
+
 
