@@ -1,0 +1,16 @@
+
+<p class="t-center t-blu" *ngIf="loading">Loading...</p>
+
+    <p *ngIf="todosArr.length == 0 && !loading" class="t-center t-blu">NON HAI COMPLETATO NESSUNA TODO, DATTI DA FARE!</p>
+
+<div class="tasks">
+  <div *ngFor="let todo of todosArr">
+    <h3>{{todo.title}}</h3>
+    <div>
+      <div  *ngIf="todo.completed == false" (click)="complete(todo.id)">
+      </div>
+      <div  (click)="delete(todo.id)">
+      </div>
+    </div>
+  </div>
+</div>

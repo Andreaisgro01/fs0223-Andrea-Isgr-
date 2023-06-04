@@ -1,0 +1,25 @@
+<div>
+  <div>
+    <form action="add-todo" >
+      <input id="placeholder" [(ngModel)]="todo.title" [(ngModel)]="innerText" name="title" type="text" placeholder="New Todo Here!" required>
+      <button (click)="newElement()"><div>+</div></button>
+    </form>
+  </div>
+</div>
+
+<p *ngIf="loading">Loading...</p>
+<p *ngIf="todosArr.length == 0 && !loading">NON CI SONO TODO, DATTI DA FARE!</p>
+
+<div class="tasks">
+  <div *ngFor="let todo of todosArr">
+    <h3 class="m0 t-center">{{todo.title}}</h3>
+    <div>
+      <div *ngIf="todo.completed == true">
+      </div>
+      <div *ngIf="todo.completed == false" (click)="complete(todo.id)">
+      </div>
+      <div (click)="delete(todo.id)">
+      </div>
+    </div>
+  </div>
+</div>
