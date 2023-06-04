@@ -31,8 +31,6 @@ export class CompletatiComponent implements OnInit {
   complete(id?:number){
     this.todosService.toggleFalseCompleted(id).then(res => this.getTodos())
   }
-  uncomplete(id?:number){
-    this.todosService.toggleTrueCompleted(id).then(res => this.getTodos())
-  }
+ 
 
 }

@@ -7,9 +7,6 @@ import { Itodo } from '../Interfaces/itodo';
   providedIn: 'root'
 })
 export class TodosService {
-  delete(id: number | undefined) {
-    throw new Error('Method not implemented.');
-  }
   apiUrl: string = 'http://localhost:3000/todos';
   todosArr:Todos[] = []
 
@@ -38,15 +35,6 @@ export class TodosService {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ completed: true })
-    }).then((res) => res.json());
-  }
-  toggleTrueCompleted(id:number = 0) {
-    return fetch(this.apiUrl+'/'+id, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ completed: false })
     }).then((res) => res.json());
   }
 }

@@ -8,9 +8,6 @@ import { Todos } from 'src/app/Modules/todos/todos.module';
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
-delete(arg0: number|undefined) {
-throw new Error('Method not implemented.');
-}
   todo: Todos = new Todos("",false);
   todosArr:Todos[] = [] ;
   loading:boolean = true;
@@ -20,13 +17,19 @@ throw new Error('Method not implemented.');
   ngOnInit(): void {
     this.getTodos();
   }
-getTodos(){
-this.todosService.getTodos().then(response => {
-  this.todosArr = response;
-  this.loading = false;
+  delete(id?:number){
+    this.todosService.delTodo(id)
+    .then((res) => {
+      this.getTodos();
+    })
+  }
+  getTodos(){
+    this.todosService.getTodos().then(response => {
+    this.todosArr = response;
+    this.loading = false;
 })
 }
- newElement(){
+  newElement(){
       if(this.innerText==""){
       this.innerText = "inserire todo"
       }else if(this.innerText=="inserire to-do"){
@@ -37,9 +40,6 @@ this.todosService.getTodos().then(response => {
     }
   }
   complete(id?:number){
-    this.todosService.toggleFalseCompleted(id).then(res => this.getTodos())
-  }
-  uncomplete(id?:number){
-    this.todosService.toggleTrueCompleted(id).then(res => this.getTodos())
+      this.todosService.toggleFalseCompleted(id).then(res => this.getTodos())
   }
 }
