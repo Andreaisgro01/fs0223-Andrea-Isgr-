@@ -24,6 +24,10 @@ export class RegisterComponent {
   };
 
   register(){
-  }
+    this.authSvc.signUp(this.data)
+    .subscribe(accessData => {
+      alert(accessData.user.name)
+  })
 
+}
 }
